@@ -6,11 +6,22 @@ assessment/
 # just as confidential as the papers it produces.
 .claude/skills/wsq-assessment/
 
-# Source material from the previous course version.
-reference/
+# Source material the courseware was derived from (the previous course version's
+# deck) — third-party material, not ours to republish. Unanchored so it matches at
+# any depth, with a negation for the skills' reference IMPLEMENTATIONS, which are
+# working build code the repo needs.
+**/reference/
+
+# The wsq-slides skill ships another course's build scripts as a house-style
+# reference implementation. It is working code, not source material, but it
+# belongs to that course — keep it local rather than republishing it here.
+.claude/skills/wsq-slides/reference/
 
 # Local environment / credentials / Drive folder ids.
 .env
+
+# Distribution archives (rebuildable — never pushed to GitHub).
+*.zip
 
 # ─── Build and OS noise ─────────────────────────────────────────────────────
 __pycache__/

@@ -121,6 +121,19 @@ This regenerates the lab workbooks (with their Power Query queries), the slide d
 the per-lab figures, the Lesson Plan and the Learner Guide, renders every PDF and
 injects page-numbered tables of contents.
 
+### Quality audit
+
+```bash
+# renders every page to an image and checks it against the house standards
+/courseware-qa
+```
+
+The courseware is audited against the published Tertiary Infotech WSQ standards at
+<https://tertiarycourses.github.io/wsqcourseware/> — the PPT 7-point and assessment
+checklists, Lesson Plan slide-reference accuracy, the Learner Guide and its Markdown
+mirror, and 100% deck/LG/lab alignment. Run it after every regeneration; the deck,
+LP and LG must pass before anything is published.
+
 ---
 
 ## Assessment
