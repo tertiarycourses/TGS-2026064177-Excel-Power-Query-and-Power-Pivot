@@ -1,0 +1,20 @@
+# ─── CONFIDENTIAL — never push to GitHub ────────────────────────────────────
+# Assessment papers and answer keys are Google-Drive only.
+assessment/
+
+# The assessment BUILDER carries the live questions and model answers, so it is
+# just as confidential as the papers it produces.
+.claude/skills/wsq-assessment/
+
+# Source material from the previous course version.
+reference/
+
+# Local environment / credentials / Drive folder ids.
+.env
+
+# ─── Build and OS noise ─────────────────────────────────────────────────────
+__pycache__/
+*.pyc
+.DS_Store
+~$*
+*.tmp
