@@ -296,18 +296,32 @@ def take_folder(field, folder_key, root, out, missing):
 CODE_RE = re.compile(r"\bTGS-\d{6,}\b")
 
 
+# A re-issued course legitimately cites its OLD code in the Document Version Control
+# Record ("Previous release under course code TGS-…"). That is history, not the course
+# this material belongs to, so it must not count as a second code — otherwise every
+# correctly-versioned re-issue trips the multiple-codes abort and can never be pushed.
+HISTORICAL_CODE_RE = re.compile(
+    r"(?:previous(?:ly)?|superseded|formerly|prior|replaced|was|re-?issued\s+from|"
+    r"under\s+(?:the\s+)?(?:old|previous)\s+)[^.\n]{0,80}?(TGS-\d{6,})",
+    re.I)
+
+
 def codes_in_docx_or_pptx(path):
-    """Every course code appearing in an Office file's text (docx/pptx are zipped XML)."""
+    """Every course code appearing in an Office file's text (docx/pptx are zipped XML),
+    excluding codes cited as HISTORY in a version-control record."""
     import xml.etree.ElementTree as ET
     import zipfile
-    found = set()
+    found, historical = set(), set()
     with zipfile.ZipFile(path) as z:
         parts = [n for n in z.namelist()
                  if n.startswith(("word/document", "ppt/slides/slide"))and n.endswith(".xml")]
         for n in sorted(parts)[:40]:  # cover slides / first pages are enough
             text = "".join(ET.fromstring(z.read(n)).itertext())
             found |= set(CODE_RE.findall(text))
-    return found
+            historical |= set(HISTORICAL_CODE_RE.findall(text))
+    # Never let the exclusion empty the set: if every code found is "historical", the
+    # phrasing was misread — keep them all and let the caller's guard speak up.
+    return (found - historical) or found
 
 
 def course_code_from_courseware(repo):
