@@ -130,6 +130,22 @@ RECOMMENDED = [
     "WSQ - Microsoft Power BI Data Analyst Associate (PL-300)",
 ]
 
+# One-line "why take this next" for each RECOMMENDED course, keyed by title.
+# The Where to Go Next tile grid needs a body line per card — a title-only tile
+# leaves the card two-thirds empty and breaks the house tile-grid look.
+RECOMMENDED_WHY = {
+    "WSQ - Data Analytics with Excel":
+        "PivotTables, charts and dashboards on the clean data you now know how to build.",
+    "WSQ - Statistical Data Analysis with Excel for Beginners":
+        "Add descriptive statistics and significance testing to your analysis.",
+    "WSQ - Software Automation with Excel VBA Programming":
+        "Automate the steps Power Query cannot reach, with macros and VBA.",
+    "WSQ - Create Interactive Dashboard Using Excel":
+        "Turn your Data Model into a slicer-driven interactive dashboard.",
+    "WSQ - Microsoft Power BI Data Analyst Associate (PL-300)":
+        "Take the same Power Query and DAX skills into Power BI.",
+}
+
 # ------------------------------------------------------------------ prerequisites / audience
 PREREQUISITES = [
     "Able to operate using computer functions",

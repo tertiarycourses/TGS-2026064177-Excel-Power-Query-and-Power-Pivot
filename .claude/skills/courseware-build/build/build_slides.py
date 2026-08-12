@@ -688,8 +688,10 @@ def admin_block(closing=False):
         x = Inches(0.85) + (i % 2) * Inches(5.95)
         y = Inches(2.05) + (i // 2) * Inches(2.35)
         col = PALETTE[i % 4]
-        rect(s, x, y, Inches(5.68), Inches(2.1), LIGHT)
-        rect(s, x, y, Inches(0.1), Inches(2.1), col)
+        # Tile height 1.95" (not 2.1") so row 2 ends at 6.35" and clears the caption
+        # baseline at 6.5" — at 2.1" the caption sat flush on the tile borders.
+        rect(s, x, y, Inches(5.68), Inches(1.95), LIGHT)
+        rect(s, x, y, Inches(0.1), Inches(1.95), col)
         bd = Inches(0.5)
         oval(s, x + Inches(0.28), y + Inches(0.28), bd, bd, col)
         txt(s, x + Inches(0.28), y + Inches(0.28), bd, bd, [[(str(i + 1), 16, WHITE, True)]],
@@ -1089,7 +1091,7 @@ def build():
 
     # M language
     compare_table("Excel Formulas vs Power Query M",
-                  ["", "Excel worksheet", "Power Query M"],
+                  ["Aspect", "Excel worksheet", "Power Query M"],
                   [["Syntax", "IF(A2>=500, 0, 15)", "if [Amount] >= 500 then 0 else 15"],
                    ["Case", "IF, AND, OR — not case sensitive", "if, and, or — MUST be lowercase"],
                    ["Refers to", "Cell addresses (A2)", "Column names in [square brackets]"],
@@ -1387,7 +1389,7 @@ def build():
                   "TOPIC 3 · APPROXIMATE MATCH", color=TEAL)
 
     compare_table("Two Ways to Rebuild an Approximate Match",
-                  ["", "Conditional column (binning)", "Banding table + merge"],
+                  ["Aspect", "Conditional column (binning)", "Banding table + merge"],
                   [["How", "if/then/else on the thresholds", "A table of Lower/Upper/Rate rows"],
                    ["Bands live", "Inside the query", "In a worksheet table anyone can edit"],
                    ["To change a band", "Edit the query step", "Edit a cell and Refresh"],
@@ -1482,7 +1484,8 @@ def build():
         ("Forgetting to expand", "A merge yields a column of tables"),
     ], kicker="REVISION · COMMON ERRORS", cols=2, size=14, accent=RED)
 
-    tile_grid("Where to Go Next", [(r, "") for r in C.RECOMMENDED[:4]],
+    tile_grid("Where to Go Next",
+              [(r, C.RECOMMENDED_WHY.get(r, "")) for r in C.RECOMMENDED[:4]],
               kicker="REVISION · RECOMMENDED COURSES", cols=2, size=14, accent=TEAL)
 
     # closing admin block: Assessment → Assessment Flow → Digital Attendance → Thank You
