@@ -9,7 +9,13 @@
 Complete WSQ courseware for **Excel Power Query and Power Pivot**, delivered by
 [Tertiary Infotech Academy Pte Ltd](https://www.tertiarycourses.com.sg) (UEN 201200696W).
 
-> **Course page:** <https://www.tertiarycourses.com.sg/casl-excel-power-query-and-power-pivot.html>
+| Course detail | Information |
+|---|---|
+| Course code | `TGS-2026064177` |
+| Programme | WSQ |
+| Duration | 2 days / 16 hours |
+| Registration | [View course details and register](https://www.tertiarycourses.com.sg/casl-excel-power-query-and-power-pivot.html) |
+| Funding | Up to 70% course-fee funding may be available. Eligibility, validity dates and other terms apply; check the registration page for current details. |
 
 ---
 
@@ -32,7 +38,7 @@ then model and analyse it. Everything is built by the learner across 19 hands-on
 
 ```
 courseware/
-  Excel Power Query and Power Pivot-v5.0.pptx   trainer slide deck (101 slides)
+  Excel Power Query and Power Pivot-v5.0.pptx   trainer slide deck (102 slides)
   Excel Power Query and Power Pivot-v5.0.pdf    learner slide deck
   LP-Excel Power Query and Power Pivot.docx     Lesson Plan (+ PDF)
   LG-Excel Power Query and Power Pivot.docx     Learner Guide (+ PDF)
@@ -76,25 +82,25 @@ click-by-click procedure lives in the Learner Guide.
 
 | Lab | Title | Topic |
 |---|---|---|
-| 01 | Load Sales Data and Fix Data Types | 1 |
-| 02 | Combine an External Workbook as a Connection Only | 1 |
-| 03 | Fill Down and Fill Up a Ragged Report | 1 |
-| 04 | Split Columns by Delimiter and into Rows | 1 |
-| 05 | Add Conditional, Custom and Example-Driven Columns | 1 |
-| 06 | Merge Columns, Sort and Filter | 1 |
-| 07 | Conditional Logic with IF in M | 2 |
-| 08 | Nest IF with AND for a Priority Flag | 2 |
-| 09 | Calculate Deadlines with Date.AddDays | 2 |
-| 10 | Unpivot a Wide Report into Tidy Rows | 2 |
-| 11 | Pivot, Pivot Without Aggregation, and Append | 2 |
-| 12 | Summarise with Group By | 2 |
-| 13 | Build a Power Pivot Data Model with DAX Measures | 2 |
-| 14 | Walk Through All Six Join Kinds | 3 |
-| 15 | Left Outer Join versus XLOOKUP | 3 |
-| 16 | Merge on Multiple Fields | 3 |
-| 17 | Approximate Match: Binning and Conditional Columns | 3 |
-| 18 | Cross Join and Drill Down to a Variable | 3 |
-| 19 | Fuzzy Matching and Transformation Tables | 3 |
+| 01 | [Load Sales Data and Fix Data Types](labs/lab-01-load-sales-data-and-fix-data-types/) | 1 |
+| 02 | [Combine an External Workbook as a Connection Only](labs/lab-02-combine-an-external-workbook-as-a-connection-only/) | 1 |
+| 03 | [Fill Down and Fill Up a Ragged Report](labs/lab-03-fill-down-and-fill-up-a-ragged-report/) | 1 |
+| 04 | [Split Columns by Delimiter and into Rows](labs/lab-04-split-columns-by-delimiter-and-into-rows/) | 1 |
+| 05 | [Add Conditional, Custom and Example-Driven Columns](labs/lab-05-add-conditional-custom-and-example-driven-columns/) | 1 |
+| 06 | [Merge Columns, Sort and Filter](labs/lab-06-merge-columns-sort-and-filter/) | 1 |
+| 07 | [Conditional Logic with IF in M](labs/lab-07-conditional-logic-with-if-in-m/) | 2 |
+| 08 | [Nest IF with AND for a Priority Flag](labs/lab-08-nest-if-with-and-for-a-priority-flag/) | 2 |
+| 09 | [Calculate Deadlines with Date.AddDays](labs/lab-09-calculate-deadlines-with-date-adddays/) | 2 |
+| 10 | [Unpivot a Wide Report into Tidy Rows](labs/lab-10-unpivot-a-wide-report-into-tidy-rows/) | 2 |
+| 11 | [Pivot, Pivot Without Aggregation, and Append](labs/lab-11-pivot-pivot-without-aggregation-and-append/) | 2 |
+| 12 | [Summarise with Group By](labs/lab-12-summarise-with-group-by/) | 2 |
+| 13 | [Build a Power Pivot Data Model with DAX Measures](labs/lab-13-build-a-power-pivot-data-model-with-dax-measures/) | 2 |
+| 14 | [Walk Through All Six Join Kinds](labs/lab-14-walk-through-all-six-join-kinds/) | 3 |
+| 15 | [Left Outer Join versus XLOOKUP](labs/lab-15-left-outer-join-versus-xlookup/) | 3 |
+| 16 | [Merge on Multiple Fields](labs/lab-16-merge-on-multiple-fields/) | 3 |
+| 17 | [Approximate Match: Binning and Conditional Columns](labs/lab-17-approximate-match-binning-and-conditional-columns/) | 3 |
+| 18 | [Cross Join and Drill Down to a Variable](labs/lab-18-cross-join-and-drill-down-to-a-variable/) | 3 |
+| 19 | [Fuzzy Matching and Transformation Tables](labs/lab-19-fuzzy-matching-and-transformation-tables/) | 3 |
 
 The mock data carries **deliberate defects and boundary cases** — text-typed numbers,
 `dd/mm/yyyy` dates, orphan product codes, exact band boundaries at 1,000 / 5,000 /
